@@ -56,16 +56,16 @@
 	
 	
 	<!--Bildergallery!-->
-	<h1>Beispiel Bildergalerie</h1>
+	<h1>Bildergalerie</h1>
 
-	<a href="bilder/tuebingen-1-gr.jpg" rel="lightbox[stadt]" title="Tübingen 1">
-		<img src="bildergalerie/tuebingen-1-kl.jpg" width="200" height="133">
+	<a href="bilder/natascha/pb.jpg" rel="lightbox[stadt]" title="natascha">
+		<img src="bilder/natascha/pb.jpg" width="200" height="133">
 	</a>
-	<a href="bildergalerie/tuebingen-2-gr.jpg" rel="lightbox[stadt]" title="Tübingen 2">
-		<img src="bildergalerie/tuebingen-2-kl.jpg" width="200" height="133">
+	<a href="bilder/natascha/p1.jpg" rel="lightbox[stadt]" title="natascha">
+		<img src="bilder/natascha/p1.jpg" width="200" height="133">
 	</a>
-	<a href="bildergalerie/tuebingen-3-gr.jpg" rel="lightbox[stadt]" title="Tübingen 3">
-		<img src="bildergalerie/tuebingen-3-kl.jpg" width="200" height="133">
+	<a href="bilder/natascha/p2.jpg" rel="lightbox[stadt]" title="natascha">
+		<img src="bilder/natascha/p2.jpg" width="200" height="133">
 	</a>
 	<a href="bildergalerie/tuebingen-4-gr.jpg" rel="lightbox[stadt]" title="Tübingen 4">
 		<img src="bildergalerie/tuebingen-4-kl.jpg" width="133" height="200">
