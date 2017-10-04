@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <title>searchlove</title>
+		<link rel="stylesheet" href="style.css">
+    </head>
+	<body>
+	
+	<div id="header">
+	<div id="logo"><img src="logo.png" width="200px">
+		<br/><strong>das Datingportal</strong>
+	</div>
+	<div id="navi">
+	<div><ul><li><a href="login.php">Home</a></li>
+	<li><a href="logout.php">Logout</a></li></ul>
+	</div></div></div>
+	<div id="content">
+	
+	
+<form action="profil.php" method="post">
+Vorname:<br>
+<input type="text" size="40" maxlength="250" name="vorname"><br><br>
+
+Nachname:<br>
+<input type="text" size="40" maxlength="250" name="nachname"><br><br>
+
+Jahrgang:<br>
+<input type="text" size="40" maxlength="250" name="jahrgang"><br><br>
+
+Geschlecht:<br>
+<input type="text" size="40" maxlength="250" name="geschlecht"><br><br>
+
+Auf was stehe ich:<br>
+<label>Hobbys:<select name="hobby1" size="4"> <option>Ich stehe auf Männer</option> <option>Ich stehe auf Frauen</option> <option>Ich bin bisexuell</option> <option>Ich stehe auf alles</option> </select></label><br/><br/>
+
+<label>Hobbys:<select name="hobby1" size="5"> <option>Teamsport</option> <option>Einzelsport</option> <option>Musik</option> <option>Literatur</option> <option>Technik</option> </select></label>
+<label>Hobbys:<select name="hobby2" size="5"> <option>Teamsport</option> <option>Einzelsport</option> <option>Musik</option> <option>Literatur</option> <option>Technik</option> </select></label>
+<label>Hobbys:<select name="hobby3" size="5"> <option>Teamsport</option> <option>Einzelsport</option> <option>Musik</option> <option>Literatur</option> <option>Technik</option> </select></label>
+
+<br/><br/>Allgemeine Information:<br>
+<input type="text" size="40" maxlength="250" name="info"><br><br>
+ 
+<label>Wählen Sie Ihr Profilbild aus (*.png, *.jpg usw.) von Ihrem Rechner aus.
+    <input name="datei" type="file" size="50" accept="text/*"> 
+</label> <br/><br/>  
+   
+ 
+<input type="submit" value="Änderungen übernehmen">
+</form>
+	
+	
+	
+	
+	
+	
+	
+
+</div>
+
+</body>
+</html>
