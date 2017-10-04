@@ -76,7 +76,7 @@
 	https://www.html-seminar.de/bildergalerie-mit-lightbox.htm
 	
 	
-	<!--         APP  start        -->
+	<!--         APP  start        
 	http://cssapps.de/foto-gal/fgal_css3_click_perm02.html#t07
 
 <div id="container">
@@ -108,7 +108,7 @@
 </ul>
 </div>
 
-<!--         APP end           -->
+        APP end           -->
 	
 	
 	
