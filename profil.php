@@ -18,7 +18,7 @@
 	
 	
 	<div id="profilbild">
-		<div id= "pb">
+		<div id= "profilbild">
 		<img src="pb.jpg" width="200px" height="200px">
 		</div>
 	</div>
@@ -58,61 +58,23 @@
 	<!--Bildergallery!-->
 	<h1>Bildergalerie</h1>
 
-	<a href="bilder/natascha/pb.jpg" rel="lightbox[stadt]" title="natascha">
-		<img src="bilder/natascha/pb.jpg" width="200" height="133">
+	<a href="bilder/natascha/pb.jpg" rel="lightbox[stadt]" title="Natascha Krebs">
+		<img src="bilder/natascha/pb.jpg" width="133" height="133">
 	</a>
-	<a href="bilder/natascha/p1.jpg" rel="lightbox[stadt]" title="natascha">
-		<img src="bilder/natascha/p1.jpg" width="200" height="133">
+	<a href="bilder/natascha/p1.jpg" rel="lightbox[stadt]" title="Natascha Krebs">
+		<img src="bilder/natascha/p1.jpg" width="133" height="133">
 	</a>
-	<a href="bilder/natascha/p2.jpg" rel="lightbox[stadt]" title="natascha">
-		<img src="bilder/natascha/p2.jpg" width="200" height="133">
+	<a href="bilder/natascha/p2.jpg" rel="lightbox[stadt]" title="Natascha Krebs">
+		<img src="bilder/natascha/p2.jpg" width="133" height="133">
 	</a>
-	<a href="bildergalerie/tuebingen-4-gr.jpg" rel="lightbox[stadt]" title="Tübingen 4">
-		<img src="bildergalerie/tuebingen-4-kl.jpg" width="133" height="200">
+	<a href="bilder/natascha/p3.jpg" rel="lightbox[stadt]" title="Natascha Krebs 4">
+		<img src="bilder/natascha/p3.jpg" width="133" height="133">
 	</a>
 
 	<script src="js/lightbox-plus-jquery.min.js"></script>
 	
-	https://www.html-seminar.de/bildergalerie-mit-lightbox.htm
+	/*https://www.html-seminar.de/bildergalerie-mit-lightbox.htm*/
 	
-	
-	<!--         APP  start        
-	http://cssapps.de/foto-gal/fgal_css3_click_perm02.html#t07
-
-<div id="container">
-<div id="window">
-<div id="all">
-    <div><img class="ls" src="../fotos/landschaft/land60.jpg" alt="picture"></div>
-    <div><img class="ls" src="../fotos/tiere/animal28.jpg" alt="picture"></div>
-    <div><img class="pt" src="../fotos/rummel/kairbr059.jpg" alt="picture"></div>
-    <div><img class="pt" src="../fotos/rummel/kirmes103.jpg" alt="picture"></div>
-    <div><img class="pt" src="../fotos/landschaft/land5.jpg" alt="picture"></div>
-    <div><img class="pt" src="../fotos/rummel/feuerwk0017.jpg" alt="picture"></div>
-    <div><img class="pt" src="../fotos/rummel/feuerwk0022.jpg" alt="picture"></div>
-    <div><img class="pt" src="../fotos/rummel/feuerwk0024.jpg" alt="picture"></div>
-    <div><img class="pt" src="../fotos/diverse/mond04.jpg" alt="picture"></div>
-    <div><img class="ls" src="../fotos/diverse/nacht14.jpg" alt="picture"></div>
-</div>
-</div>
-<ul>
-    <li><a href="#t01"><img src="../fotos/landschaft/land60.jpg" alt="picture"></a></li>
-    <li><a href="#t02"><img src="../fotos/tiere/animal28.jpg" alt="picture"></a></li>
-    <li><a href="#t03"><img src="../fotos/rummel/kairbr059.jpg" alt="picture"></a></li>
-    <li><a href="#t04"><img src="../fotos/rummel/kirmes103.jpg" alt="picture"></a></li>
-    <li><a href="#t05"><img src="../fotos/landschaft/land5.jpg" alt="picture"></a></li>
-    <li><a href="#t06"><img src="../fotos/rummel/feuerwk0017.jpg" alt="picture"></a></li>
-    <li><a href="#t07"><img src="../fotos/rummel/feuerwk0022.jpg" alt="picture"></a></li>
-    <li><a href="#t08"><img src="../fotos/rummel/feuerwk0024.jpg" alt="picture"></a></li>
-    <li><a href="#t09"><img src="../fotos/diverse/mond04.jpg" alt="picture"></a></li>
-    <li><a href="#t10"><img src="../fotos/diverse/nacht14.jpg" alt="picture"></a></li>
-</ul>
-</div>
-
-        APP end           -->
-	
-	
-	
-
 	</div>
 
 	</body>
