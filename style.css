@@ -43,13 +43,19 @@ h1 {
 
 }
 
-#profilbild {
+#profilspalte {
 	/*background-color: yellow;*/
 	width: 250px;
 	height:700px;
 	float: left;
 	padding-top: 50px;
 	
+}
+
+#prilbild {
+	/*box-shadow: 10px 10px 10px grey*/
+	border: 1px solid #ddd;
+	padding: 4px;
 }
 
 #pb {
