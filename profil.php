@@ -21,7 +21,8 @@
 		<br/><strong>das Datingportal</strong>
 	</div>
 	<div id="navi">
-	<div><ul><li><a href="login.php">Home</a></li>
+	<div><ul><!--<li><a href="login.php">Home</a></li>-->
+	<li><a href="profil.html">Bearbeiten</a></li>
 	<li><a href="logout.php">Logout</a></li></ul>
 	</div></div></div>
 	<div id="content">
