@@ -28,7 +28,7 @@
 	<div id="content">
 	
 	
-	<div id="profilbild">
+	<div id="profilbildspalte">
 		<div id= "profilbild">
 		<img src="pb.jpg" width="200px" height="200px">
 		</div>
