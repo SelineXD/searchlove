@@ -21,21 +21,49 @@
 		<br/><strong>das Datingportal</strong>
 	</div>
 	<div id="navi">
-	<div><ul>
-	<li><a href="formular.html">Suche</a></li>
-	<li><a href="mach.php">Match</a></li>
-	<li><a href="login.php">Home</a></li>
-	<div class="dropdown">
-		<button class="dropbtn"href="profil.php">Profil</button>
-			<div class="dropdown-content">
-				<a href="profil.php">Mein Profil</a>
-				<a href="profil.html">Profil Bearbeiten</a>
-				<a href="logout.php">Logout</a>
-			</div>
-	</div> 
+	<div><ul><li><a href="login.php">Home</a></li>
+	<li><a href="profil.html">Bearbeiten</a></li>
 	<!--<li><a href="logout.php">Logout</a></li>--></ul>
 	</div></div></div>
 	<div id="content">
+	
+	<?php
+$pdo = new PDO('mysql:host=localhost;dbname=searchlove', 'root', '');
+	?>
+	<?php
+	$showFormular = true; //Variable ob das Registrierungsformular anezeigt werden soll
+ 
+ 
+ //if(isset($_GET['register'])) {
+ $error = false;
+echo $name = $_POST['name'];
+echo $vorname = $_POST['vorname'];
+echo $jahrgang = $_POST['jahrgang'];
+echo $geschlecht = $_POST['geschlecht'];
+echo $interessiert = $_POST['interessiert'];
+echo $suchenach = $_POST['suchenach']; 
+echo $hobby1 = $_POST['hobby1'];
+echo $hobby2 = $_POST['hobby2'];
+echo $hobby3 = $_POST['hobby3'];
+ 
+
+ 
+  
+ $statement = $pdo->prepare("INSERT INTO users2 (name, vorname, jahrgang, geschlecht, interessiert, suchenach, hobby1, hobby2, hobby3) VALUES (:name, :vorname, :jahrgang, :geschlecht, :interessiert, :suchenach, :hobby1, :hobby2, :hobby3)");
+ $result = $statement->execute(array('name' => $name, 'vorname' => $vorname, 'jahrgang' => $jahrgang, 'geschlecht' => $geschlecht, 'interessiert' => $interessiert, 'suchenach' => $suchenach, 'hobby1' => $hobby1, 'hobby2' => $hobby2, 'hobby3' => $hobby3));
+ 
+ if($result) { 
+ echo 'Die Angaben wurden erflogreich gespeichert.';
+ $showFormular = false;
+ } else {
+ echo 'Beim Abspeichern ist leider ein Fehler aufgetreten<br>';
+ }
+//} 
+
+ 
+?> 
+	
+	
 	
 	
 	<div id="profilbildspalte">
@@ -45,34 +73,29 @@
 	</div>
 	
 	<div id="angaben">
-	<form action="?register=1" method="post">
 	Vorname:<br>
-		<input type="text" size="40" maxlength="250" name="vorname">
+		<?php echo $vorname; ?>
 
 	Nachname:
-		<input type="text" size="40" maxlength="250" name="nachname"><br><br>
+		<?php echo $name; ?>
 
 	Jahrgang:<br>
-		<input type="text" size="40" maxlength="250" name="jahrgang"><br><br>
 
 	Geschlecht:<br>
-		<input type="text" size="40" maxlength="250" name="geschlecht"><br><br>
 
 	Interessiert an:<br>
-		<input type="text" size="40" maxlength="250" name="type"><br><br> 
 
 	Auf der Suche nach:<br>
-		<input type="text" size="40" maxlength="250" name="suche"><br><br>
 
 	Hobbys:<br>
-		<input type="text" size="40" maxlength="250" name="hobbys"><br><br>
 
 	Allgemeine Information:<br>
-		<input type="text" size="40" maxlength="250" name="info"><br><br>
 	</br></br>
+	
+ 
 
-	</form> 
 	</div>
+	
 	
 	
 	
