@@ -46,15 +46,15 @@ $pdo = new PDO('mysql:host=localhost;dbname=searchlove', 'root', '');
  
  //if(isset($_GET['register'])) {
  $error = false;
-echo $name = $_POST['name'];
-echo $vorname = $_POST['vorname'];
-echo $jahrgang = $_POST['jahrgang'];
-echo $geschlecht = $_POST['geschlecht'];
-echo $interessiert = $_POST['interessiert'];
-echo $suchenach = $_POST['suchenach']; 
-echo $hobby1 = $_POST['hobby1'];
-echo $hobby2 = $_POST['hobby2'];
-echo $hobby3 = $_POST['hobby3'];
+$name = $_POST['name'];
+$vorname = $_POST['vorname'];
+$jahrgang = $_POST['jahrgang'];
+$geschlecht = $_POST['geschlecht'];
+$interessiert = $_POST['interessiert'];
+$suchenach = $_POST['suchenach']; 
+$hobby1 = $_POST['hobby1'];
+$hobby2 = $_POST['hobby2'];
+$hobby3 = $_POST['hobby3'];
  
 
  
