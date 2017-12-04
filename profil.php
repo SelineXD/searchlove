@@ -90,14 +90,21 @@ $hobby3 = $_POST['hobby3'];
 		<?php echo $name; ?>
 
 	Jahrgang:<br>
+		<?php echo $jahrgang; ?>
 
 	Geschlecht:<br>
+		<?php echo $geschlecht; ?>
 
 	Interessiert an:<br>
+		<?php echo $interessiert; ?>
 
 	Auf der Suche nach:<br>
+		<?php echo $suchenach;?>
 
 	Hobbys:<br>
+		<?php echo $hobby1;
+			echo $hobby2;
+			echo $hobby3; ?>
 
 	Allgemeine Information:<br>
 	</br></br>
