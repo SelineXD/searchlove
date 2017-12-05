@@ -121,7 +121,7 @@ a:active {
 
 }
 
-div#navi {
+/*div#navi {
 	margin-top: 8px;
 	margin-bottom: 8px;
 	margin-left: 0px;
@@ -182,55 +182,42 @@ div#navi a:visited {
 div#navi a {
 	text-decoration: none;
 	color: #6699cc;
-}
+}*/
 
 /* ======================================================
 		navi/mainNav
-======================================================= 
+======================================================= */
 .container {
     overflow: hidden;
-    background-color: #333;
+    background-color: white;
     font-family: Arial;
 }
 
 .container a {
     float: left;
     font-size: 16px;
-    color: white;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
-/*---------------------------------------------------------
-------------------------Dropdown---------------------------
------------------------------------------------------------ 
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+
+/* ======================================================
+		dropdown-content
+======================================================= */
+.dropdown {
+    float: right;
     overflow: hidden;
-    background-color: #333;
 }
 
-li {
-    float: left;
-}
-
-li a, .dropbtn {
-    display: inline-block;
-    color: white;
-    text-align: center;
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: black;
     padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
-}
-
-li.dropdown {
-    display: inline-block;
+    background-color: inherit;
 }
 
 .dropdown-content {
@@ -243,6 +230,7 @@ li.dropdown {
 }
 
 .dropdown-content a {
+    float: none;
     color: black;
     padding: 12px 16px;
     text-decoration: none;
@@ -250,10 +238,21 @@ li.dropdown {
     text-align: left;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {
+    background-color: #ddd;
+	color: white;
+}
 
 .dropdown:hover .dropdown-content {
     display: block;
+	
+}
+
+
+.container a:hover, .dropdown:hover .dropbtn {
+   ;
+	box-shadow: 0px 8px 16px 0px #1a9a9a;
+	color: #1a9a9a;
 }
 
 /*---------------------------------------------------------
