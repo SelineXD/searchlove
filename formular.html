@@ -44,7 +44,41 @@
 		$sql = "SELECT * FROM searchlove WHERE spalte LIKE '%Suchwort%'"; 
 
 	?>
-	
+	<?php
+		require_once ('formular.html');
+		$db_link = mysqli_connect (
+							 MYSQL_localhost, 
+							 MYSQL_root, 
+							 MYSQL_searchlove
+							);
+		 
+		$sql = "SELECT * FROM benutzer";
+		 
+		$db_erg = mysqli_query( $db_link, $sql );
+		if ( ! $db_erg )
+		{
+		  die('Ungültige Abfrage: ' . mysqli_error());
+		}
+		 
+		echo '<table border="1">';
+		while ($zeile = mysqli_fetch_array( $db_erg, MYSQL_ASSOC))
+		{
+		  echo "<tr>";
+		  echo "<td>". $nachname['nachname'] . "</td>";
+		  echo "<td>". $vorname['vorname'] . "</td>";
+		  echo "<td>". $jahrgang['jahrgang'] . "</td>";
+		  echo "<td>". $geschlecht['geschlecht'] . "</td>";
+		  echo "<td>". $interessiert['interessiert'] . "</td>";
+		  echo "<td>". $suchenach['suchenach'] . "</td>";
+		  echo "<td>". $hobby1['hobby1'] . "</td>";
+		  echo "<td>". $hobby2['hobby2'] . "</td>";
+		  echo "<td>". $hobby3['hobby3'] . "</td>";
+		  echo "</tr>";
+		}
+		echo "</table>";
+		 
+		mysqli_free_result( $db_erg );
+	?>
 	
 	</div>
 
