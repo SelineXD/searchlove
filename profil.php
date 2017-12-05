@@ -83,39 +83,33 @@ $hobby3 = $_POST['hobby3'];
 	</div>
 	
 	<div id="angaben">
-	Vorname:<br>
-		<?php echo $vorname; ?>
+	Vorname:
+		<?php echo $vorname; ?><br><br>
 
 	Nachname:
-		<?php echo $name; ?>
+		<?php echo $name; ?><br><br>
 
-	Jahrgang:<br>
-		<?php echo $jahrgang; ?>
+	Jahrgang:
+		<?php echo $jahrgang; ?><br><br>
 
-	Geschlecht:<br>
-		<?php echo $geschlecht; ?>
+	Geschlecht:
+		<?php echo $geschlecht; ?><br><br>
 
-	Interessiert an:<br>
-		<?php echo $interessiert; ?>
+	Interessiert an:
+		<?php echo $interessiert; ?><br><br>
 
-	Auf der Suche nach:<br>
-		<?php echo $suchenach;?>
+	Auf der Suche nach:
+		<?php echo $suchenach;?><br><br>
 
-	Hobbys:<br>
+	Hobbys:
 		<?php echo $hobby1;
 			echo $hobby2;
-			echo $hobby3; ?>
+			echo $hobby3; ?><br><br><br>
 
-	Allgemeine Information:<br>
+	Allgemeine Information:
 	</br></br>
-	
- 
-
-	</div>
-	
-	
-	
-	
+	</div><br><br>
+		
 	<!--Bildergallery!-->
 	<h1>Bildergalerie</h1>
 
@@ -133,9 +127,7 @@ $hobby3 = $_POST['hobby3'];
 	</a>
 
 	<script src="js/lightbox-plus-jquery.min.js"></script>
-	
-	/*https://www.html-seminar.de/bildergalerie-mit-lightbox.htm*/
-	
+		
 	</div>
 
 	</body>
