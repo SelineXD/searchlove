@@ -82,32 +82,33 @@ $hobby3 = $_POST['hobby3'];
 		</div>
 	</div>
 	
-	<div id="angaben">
-	Vorname:
-		<?php echo $vorname; ?><br><br>
+<div id="angaben">
+	<b>Vorname:</b><br/>
+		<?php echo $vorname; ?><br/><br/>
 
-	Nachname:
-		<?php echo $name; ?><br><br>
+	<b>Nachname:</b><br/>
+		<?php echo $name; ?><br/><br/>
 
-	Jahrgang:
-		<?php echo $jahrgang; ?><br><br>
+	<b>Jahrgang:</b><br/>
+		<?php echo $jahrgang; ?><br/><br/>
 
-	Geschlecht:
-		<?php echo $geschlecht; ?><br><br>
+	<b>Geschlecht:</b><br/>
+		<?php echo $geschlecht; ?><br/><br/>
 
-	Interessiert an:
-		<?php echo $interessiert; ?><br><br>
+	<b>Interessiert an:</b><br/>
+		<?php echo $interessiert; ?><br/><br/>
 
-	Auf der Suche nach:
-		<?php echo $suchenach;?><br><br>
+	<b>Auf der Suche nach:</b><br/>
+		<?php echo $suchenach; ?><br/><br/>
 
-	Hobbys:
-		<?php echo $hobby1;
-			echo $hobby2;
-			echo $hobby3; ?><br><br><br>
+	<b>Hobbys:</b><br/>
+		<?php echo $hobby1; ?>, <?php echo $hobby2; ?> und <?php echo $hobby3; ?><br/><br/>
 
-	Allgemeine Information:
-	</br></br>
+	<!--Allgemeine Information:<br/>
+	</br></br>-->
+	
+ 
+
 	</div><br><br>
 		
 	<!--Bildergallery!-->
