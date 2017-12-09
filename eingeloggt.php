@@ -16,32 +16,46 @@
 	</div>
     <body>
 	<div id="header">
-	<img src="logo.png" width="200px">
+	<div id="logo"><img src="logo.png" width="200px">
 		<br/><strong>das Datingportal</strong>
 	</div>
-	<div id="content">
-	<div id="navi">
-	<div><!--<ul><li><a href="login.php">Login</a></li>
-	<li><a href="formular.html">Datum</a></li>
-	<li><a href="formular2.html">Name</a></li>
-	<li><a href="formular3.html">Hinzufügen</a></li>-->
-	<li><a href="logout.php">Logout</a></li></ul>
-	</div></div>
-	
-
-<?php
+	<div class="container">
+			<a href="formular.html">Suche </a>
+			<a href="mach.php">Mach </a>
+			<a href="login.php">Home </a>
+				<div class="dropdown">
+					<button class="dropbtn"href="profil.php.php">
+					<?php
 session_start();
 $pdo = new PDO('mysql:host=localhost;dbname=searchlove', 'root', '');
 
-if(!isset($_SESSION['userid'])) {
- die('Bitte zuerst <a href="login.php">einloggen</a>');
-}
- 
 //Abfrage der Nutzer ID vom Login
 $userid = $_SESSION['userid'];
+
+$sql = "SELECT nachname,vorname FROM users WHERE id = '$userid'";
+$result = $pdo->query($sql);
  
-echo "Hallo User: ".$userid;
+if ($result->rowCount() > 0) {
+        while($row = $result->fetch()) {
+            echo $row["vorname"]. " " . $row["nachname"] . "</br>";
+                }
+            }   else {
+                echo "ERROR";
+            }
 ?>
+				</button>
+						<div class="dropdown-content">
+							<a href="profil.php">Mein Profil</a>
+							<a href="profil.html">Profil bearbeiten</a>
+							<a href="logout.php">Logout </a>
+						</div>
+				</div> 
+			
+		</div> <!--Ende container-->
+	</div>
+	<div id="content">
+
+	
 
 <form action="profil.php" method="post">
 Vorname:<br>
