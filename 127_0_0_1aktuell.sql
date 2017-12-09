@@ -64,36 +64,41 @@ CREATE TABLE `users2` (
   `suchenach` varchar(10) DEFAULT NULL,
   `hobby1` varchar(20) DEFAULT NULL,
   `hobby2` varchar(16) DEFAULT NULL,
-  `hobby3` varchar(17) DEFAULT NULL
+  `hobby3` varchar(17) DEFAULT NULL,
+  `profilbild` int(11) NOT NULL,
+  `infos` int(11) NOT NULL,
+  `bild1` int(11) NOT NULL,
+  `bild2` int(11) NOT NULL,
+  `bild3` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `users2`
 --
 
-INSERT INTO `users2` (`name`, `vorname`, `jahrgang`, `geschlecht`, `interessiert`, `suchenach`, `hobby1`, `hobby2`, `hobby3`) VALUES
-('Krebs', ' Natascha', 1996, ' Frau', ' Männer', ' Freunde', ' Einzel... Teamsport', ' Reisen', ' Film und Foto'),
-('Meyer', ' Alicia', 1999, ' Frau', ' Männer', ' Beziehung', ' Gamen', ' Freunde treffen', ' Musik'),
-('Chang', ' Lia', 2001, ' Frau', ' Frauen', ' Beziehung', ' Freunde treffen', ' Musik', ' Socialmedia'),
-('Weber', ' Brigitt', 1995, ' Frau', ' Männer', ' Beziehung', ' Einzelsport', ' Shopping', ' Freunde treffen'),
-('Keller', ' Franca', 1989, ' Frau', ' Männer', ' Beziehung', ' Musik', ' Freunde treffen', ' Kunst'),
-('Schmid', ' Kirsten', 1987, ' Frau', ' Männer', ' Beziehung', ' Kunst', ' Sport', ' '),
-('Huber', ' Maria', 1984, ' Frau', ' Frauen und Männer', ' Freunde', ' Sport', ' Freunde treffen', ' '),
-('Baumann', ' Petra', 1999, ' Frau', ' Männer', ' Beziehung', ' Freunde treffen', ' ', ' '),
-('Moser', ' Ruth', 1957, ' Frau', ' Männer', ' Beziehung', ' Theater', ' Literatur', ' '),
-('centino', ' Celina', 1998, ' Frau', ' Männer', ' Beziehung', ' Socialmedia', ' ', ' '),
-('Müller', ' Philippe', 1998, ' Mann', ' Frauen', ' Beziehung', ' Sport', ' ', ' '),
-('Koch', ' Luca', 1997, ' Mann', ' Männer', ' Beziehung', ' Kochen', ' Kino', ' '),
-('Buchs', ' Rafael', 1987, ' Mann', ' Frauen', ' Beziehung', ' Musik', ' ', ' '),
-('Ritz', ' Tim', 1952, ' Mann', ' Frauen', ' Beziehung', ' Theater', ' ', ' '),
-('Studer', ' Peter', 1992, ' Mann', ' Frauen', ' Beziehung', ' Musik', ' ', ' '),
-('Salzgeber', ' Brett', 1982, ' Mann', ' Frauen und Männer', ' Beziehung', ' Freunde treffen', ' Musik', ' '),
-('Zimmermann', ' Michael', 1987, ' Mann', ' Männer', ' Beziehung', ' Sport', ' Shopping', ' Freunde treffen'),
-('Schmidt', ' Sandro', 1992, ' Mann', ' Frauen', ' Beziehung', ' Musik', ' Freunde treffen', ' '),
-('Eggel', ' Jan', 1989, ' Mann', ' Männer', ' Beziehung', ' Kunst', ' Sport', ' Musik'),
-('Neuer', ' Tom', 1995, ' Mann', ' Frauen', ' Beziehung', ' Sport', ' Musik', ' Freunde treffen'),
-('Adao', ' Ebenezer', 1980, ' Mann', ' Frauen', ' Beziehung', ' Kino', ' ', ' '),
-('Andenmatten', 'Seline', 1998, 'weibl', 'mann', 'beziehung', 'literatur', 'Kunst', 'foto');
+INSERT INTO `users2` (`name`, `vorname`, `jahrgang`, `geschlecht`, `interessiert`, `suchenach`, `hobby1`, `hobby2`, `hobby3`, `profilbild`, `infos`, `bild1`, `bild2`, `bild3`) VALUES
+('Krebs', ' Natascha', 1996, ' Frau', ' Männer', ' Freunde', ' Einzel... Teamsport', ' Reisen', ' Film und Foto', 0, 0, 0, 0, 0),
+('Meyer', ' Alicia', 1999, ' Frau', ' Männer', ' Beziehung', ' Gamen', ' Freunde treffen', ' Musik', 0, 0, 0, 0, 0),
+('Chang', ' Lia', 2001, ' Frau', ' Frauen', ' Beziehung', ' Freunde treffen', ' Musik', ' Socialmedia', 0, 0, 0, 0, 0),
+('Weber', ' Brigitt', 1995, ' Frau', ' Männer', ' Beziehung', ' Einzelsport', ' Shopping', ' Freunde treffen', 0, 0, 0, 0, 0),
+('Keller', ' Franca', 1989, ' Frau', ' Männer', ' Beziehung', ' Musik', ' Freunde treffen', ' Kunst', 0, 0, 0, 0, 0),
+('Schmid', ' Kirsten', 1987, ' Frau', ' Männer', ' Beziehung', ' Kunst', ' Sport', ' ', 0, 0, 0, 0, 0),
+('Huber', ' Maria', 1984, ' Frau', ' Frauen und Männer', ' Freunde', ' Sport', ' Freunde treffen', ' ', 0, 0, 0, 0, 0),
+('Baumann', ' Petra', 1999, ' Frau', ' Männer', ' Beziehung', ' Freunde treffen', ' ', ' ', 0, 0, 0, 0, 0),
+('Moser', ' Ruth', 1957, ' Frau', ' Männer', ' Beziehung', ' Theater', ' Literatur', ' ', 0, 0, 0, 0, 0),
+('centino', ' Celina', 1998, ' Frau', ' Männer', ' Beziehung', ' Socialmedia', ' ', ' ', 0, 0, 0, 0, 0),
+('Müller', ' Philippe', 1998, ' Mann', ' Frauen', ' Beziehung', ' Sport', ' ', ' ', 0, 0, 0, 0, 0),
+('Koch', ' Luca', 1997, ' Mann', ' Männer', ' Beziehung', ' Kochen', ' Kino', ' ', 0, 0, 0, 0, 0),
+('Buchs', ' Rafael', 1987, ' Mann', ' Frauen', ' Beziehung', ' Musik', ' ', ' ', 0, 0, 0, 0, 0),
+('Ritz', ' Tim', 1952, ' Mann', ' Frauen', ' Beziehung', ' Theater', ' ', ' ', 0, 0, 0, 0, 0),
+('Studer', ' Peter', 1992, ' Mann', ' Frauen', ' Beziehung', ' Musik', ' ', ' ', 0, 0, 0, 0, 0),
+('Salzgeber', ' Brett', 1982, ' Mann', ' Frauen und Männer', ' Beziehung', ' Freunde treffen', ' Musik', ' ', 0, 0, 0, 0, 0),
+('Zimmermann', ' Michael', 1987, ' Mann', ' Männer', ' Beziehung', ' Sport', ' Shopping', ' Freunde treffen', 0, 0, 0, 0, 0),
+('Schmidt', ' Sandro', 1992, ' Mann', ' Frauen', ' Beziehung', ' Musik', ' Freunde treffen', ' ', 0, 0, 0, 0, 0),
+('Eggel', ' Jan', 1989, ' Mann', ' Männer', ' Beziehung', ' Kunst', ' Sport', ' Musik', 0, 0, 0, 0, 0),
+('Neuer', ' Tom', 1995, ' Mann', ' Frauen', ' Beziehung', ' Sport', ' Musik', ' Freunde treffen', 0, 0, 0, 0, 0),
+('Adao', ' Ebenezer', 1980, ' Mann', ' Frauen', ' Beziehung', ' Kino', ' ', ' ', 0, 0, 0, 0, 0),
+('Andenmatten', 'Seline', 1998, 'weibl', 'mann', 'beziehung', 'literatur', 'Kunst', 'foto', 0, 0, 0, 0, 0);
 
 --
 -- Indizes der exportierten Tabellen
