@@ -21,7 +21,7 @@
 		<br/><strong>das Datingportal</strong>
 	</div>
 	<div class="container">
-			<a href="formular.html">Suche </a>
+			<a href="formular.php">Suche </a>
 			<a href="mach.php">Mach </a>
 			<a href="login.php">Home </a>
 				<div class="dropdown">
@@ -49,8 +49,8 @@ if ($result->rowCount() > 0) {
 					
 					</button>
 						<div class="dropdown-content">
-							<a href="profil.php">Mein Profil</a>
-							<a href="profil.html">Profil bearbeiten</a>
+							<a href="all.php">Mein Profil</a>
+							<a href="bearbeiten.php">Profil bearbeiten</a>
 							<a href="bild.php">Bilder hochladen </a>
 							<a href="logout.php">Logout </a>
 						</div>
@@ -81,36 +81,8 @@ if ($result->rowCount() > 0) {
 		<img src="pb.jpg" width="200px" height="200px">
 		</div>
 	</div>
+
 	
-	<div id="angaben">
-	Vorname:
-		<?php echo $vorname; ?><br><br>
-
-	Nachname:
-		<?php echo $name; ?><br><br>
-
-	Jahrgang:
-		<?php echo $jahrgang; ?><br><br>
-
-	Geschlecht:
-		<?php echo $geschlecht; ?><br><br>
-
-	Interessiert an:
-		<?php echo $interessiert; ?><br><br>
-
-	Auf der Suche nach:
-		<?php echo $suchenach;?><br><br>
-
-	Hobbys:
-		<?php echo $hobby1;
-			echo $hobby2;
-			echo $hobby3; ?><br><br><br>
-
-	Allgemeine Information:
-	</br></br>
-	
-	</div><br><br>
-
 	
 	</div>
 

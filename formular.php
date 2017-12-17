@@ -21,9 +21,8 @@
 		<br/><strong>das Datingportal</strong>
 	</div>
 	<div class="container">
-			<a href="formular.html">Suche </a>
+			<a href="formular.php">Suche </a>
 			<a href="mach.php">Mach </a>
-			<a href="bild.php">Bilder hochladen </a>
 			<a href="login.php">Home </a>
 				<div class="dropdown">
 					<button class="dropbtn"href="profil.php.php">
@@ -49,8 +48,9 @@ if ($result->rowCount() > 0) {
 					
 					</button>
 						<div class="dropdown-content">
-							<a href="profil.php">Mein Profil</a>
-							<a href="profil.html">Profil bearbeiten</a>
+							<a href="all.php">Mein Profil</a>
+							<a href="bearbeiten.php">Profil bearbeiten</a>
+							<a href="bild.php">Bilder hochladen </a>
 							<a href="logout.php">Logout </a>
 						</div>
 				</div> 
