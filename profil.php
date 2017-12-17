@@ -49,6 +49,7 @@ if ($result->rowCount() > 0) {
 						<div class="dropdown-content">
 							<a href="profil.php">Mein Profil</a>
 							<a href="profil.html">Profil bearbeiten</a>
+							<a href="bild.php">Bilder hochladen </a>
 							<a href="logout.php">Logout </a>
 						</div>
 				</div> 
@@ -59,9 +60,7 @@ if ($result->rowCount() > 0) {
 	
 	<?php
 $pdo = new PDO('mysql:host=localhost;dbname=searchlove', 'root', '');
-	?>
-	<?php
-	$showFormular = true; //Variable ob das Registrierungsformular anezeigt werden soll
+$showFormular = true; //Variable ob das Registrierungsformular anezeigt werden soll
  
  
  //if(isset($_GET['register'])) {
@@ -75,8 +74,7 @@ $suchenach = $_POST['suchenach'];
 $hobby1 = $_POST['hobby1'];
 $hobby2 = $_POST['hobby2'];
 $hobby3 = $_POST['hobby3'];
- 
-
+$infos = $_POST['infos'];
  
   
  $statement = $pdo->prepare("INSERT INTO users2 (name, vorname, jahrgang, geschlecht, interessiert, suchenach, hobby1, hobby2, hobby3) VALUES (:name, :vorname, :jahrgang, :geschlecht, :interessiert, :suchenach, :hobby1, :hobby2, :hobby3)");
@@ -89,8 +87,6 @@ $hobby3 = $_POST['hobby3'];
  echo 'Beim Abspeichern ist leider ein Fehler aufgetreten<br>';
  }
 //} 
-
- 
 ?> 
 	
 	
@@ -124,31 +120,32 @@ $hobby3 = $_POST['hobby3'];
 	<b>Hobbys:</b><br/>
 		<?php echo $hobby1; ?>, <?php echo $hobby2; ?> und <?php echo $hobby3; ?><br/><br/>
 
-	<!--Allgemeine Information:<br/>
-	</br></br>-->
-	
- 
+	<b>Allgemeine Informationen:</b><br/>
+		<?php echo $infos; ?><br/><br/>
 
 	</div><br><br>
 		
 	<!--Bildergallery!-->
 	<h1>Bildergalerie</h1>
 
-	<a href="bilder/natascha/pb.jpg" rel="lightbox[stadt]" title="Natascha Krebs">
-		<img src="bilder/natascha/pb.jpg" width="133" height="133">
-	</a>
-	<a href="bilder/natascha/p1.jpg" rel="lightbox[stadt]" title="Natascha Krebs">
-		<img src="bilder/natascha/p1.jpg" width="133" height="133">
-	</a>
-	<a href="bilder/natascha/p2.jpg" rel="lightbox[stadt]" title="Natascha Krebs">
-		<img src="bilder/natascha/p2.jpg" width="133" height="133">
-	</a>
-	<a href="bilder/natascha/p3.jpg" rel="lightbox[stadt]" title="Natascha Krebs 4">
-		<img src="bilder/natascha/p3.jpg" width="133" height="133">
-	</a>
+	<?php
+	
+	
+	echo "<a href='Natascha\pb.jpg' rel='lightbox[stadt]' title='Natascha Krebs'>";
+	echo "<img src='Natascha\pb.jpg' width='133' height='133'>";
+	echo "</a>";
+	echo "<a href='Natascha\p1.jpg' rel='lightbox[stadt]' title='Natascha Krebs'>";
+	echo "<img src='Natascha\p1.jpg' width='133' height='133'>";
+	echo "</a>";
+	echo "<a href='Natascha\p2.jpg'	rel='lightbox[stadt]' title='Natascha Krebs'>";
+	echo "<img src='Natascha\p2.jpg' width='133' height='133'>";
+	echo "</a>";
+	echo "<a href='Natascha\p3.jpg' rel='lightbox[stadt]' title='Natascha Krebs 4'>";
+	echo "<img src='Natascha\p3.jpg' width='133' height='133'>";
+	echo "</a>";
 
-	<script src="js/lightbox-plus-jquery.min.js"></script>
-		
+	echo "<script src='js/lightbox-plus-jquery.min.js'></script>";
+	?>	
 	</div>
 
 	</body>
