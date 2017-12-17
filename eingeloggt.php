@@ -47,6 +47,7 @@ if ($result->rowCount() > 0) {
 						<div class="dropdown-content">
 							<a href="profil.php">Mein Profil</a>
 							<a href="profil.html">Profil bearbeiten</a>
+							<a href="bild.php">Bilder hochladen </a>
 							<a href="logout.php">Logout </a>
 						</div>
 				</div> 
@@ -54,8 +55,6 @@ if ($result->rowCount() > 0) {
 		</div> <!--Ende container-->
 	</div>
 	<div id="content">
-
-	
 
 <form action="profil.php" method="post">
 Vorname:<br>
@@ -230,14 +229,12 @@ Auf was stehe ich:<br>
 	<option value="socialmedia"> Socialmedia</option>	
 
 	
-</select></label>
+</select></label></br>
 
-<!--<br/><br/>Allgemeine Information:<br>
-<input type="text" size="40" maxlength="250" name="info"><br><br>!-->
- </br></br>
+Erzähl doch noch etwas über dich!</br>
+<input type="text" size="40" maxlength="250" name="infos"><br><br>
 <input type="submit" value="Profil speichern">
 </form> 
-
 </div>
      
 	 <div id="footer"></div>
