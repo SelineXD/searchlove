@@ -60,29 +60,31 @@ if ($result->rowCount() > 0) {
 	</div>
 	<div id="content">
 	
-	<?php //Abfrage anderer Profile mit gleichen Interessen
-		$pdo = new PDO('mysql:host=localhost;dbname=searchlove', 'root', '');
-		 
-		// Findet alle Einträge mit Vornamen Max und Nachnamen Mustermann:
-		$sql = "SELECT * FROM users WHERE vorname = 'Max' AND nachname = 'Mustermann'"; 
-		 
-		// Findet alle Einträge mit Vornamen Max oder mit Nachnamen Mustermann:
-		$sql = "SELECT * FROM users WHERE vorname = 'Max' OR nachname = 'Mustermann'"; 
-		 
-		// Findet alle Einträge mit Vornamen Max und Nachnamen Mustermann 
-		// oder die als E-Mail Adresse info@php-einfach.de angegeben haben:
-		$sql = "SELECT * FROM users WHERE (vorname = 'Max' AND nachname = 'Mustermann') OR (email = 'info@php-einfach.de)"; 
-
-	?>
-	
-	
 	<div id="profilbildspalte">
 		<div id= "profilbild">
 		<img src="pb.jpg" width="200px" height="200px">
 		</div>
 	</div>
 
-	
+<?php
+
+// Folgender Ansatz habe ich bereits: 
+//SELECT `vorname`, `name`, `jahrgang`, `geschlecht`, `interessiert`, `suchenach`, `hobby1`, `hobby2`, `hobby3`, `infos` FROM `users2` WHERE `hobby1` = 'kunst' OR `hobby2` = 'kunst' OR `hobby3` = 'kunst'
+//funktioniert leider noch nicht ...
+
+$result = $pdo->query($sql);
+
+if ($result->rowCount() > 0) {
+        while($row = $result->fetch()) {
+            echo $row["vorname"]. " " . $row["name"] . " " . $row["jahrgang"]. " " . $row["geschlecht"]. " " . $row["interessiert"]. " " . $row["suchenach"]. " " . $row["infos"]. " " . $row["hobby1"]. " " . $row["hobby2"]. " " . $row["hobby3"] . "</br>";
+                }
+            }   else {
+                echo "ERROR";
+            }
+
+
+
+?>	
 	
 	</div>
 
