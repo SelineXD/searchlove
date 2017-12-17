@@ -94,7 +94,7 @@ $infos = $_POST['infos'];
 	
 	<div id="profilbildspalte">
 		<div id= "profilbild">
-		<img src="pb.jpg" width="200px" height="200px">
+		<?php echo "<img src='Bilder\Natascha\pb.jpg' width='200px' height='200px'>"?>
 		</div>
 	</div>
 	
@@ -131,17 +131,17 @@ $infos = $_POST['infos'];
 	<?php
 	
 	
-	echo "<a href='Natascha\pb.jpg' rel='lightbox[stadt]' title='Natascha Krebs'>";
-	echo "<img src='Natascha\pb.jpg' width='133' height='133'>";
+	echo "<a href='Bilder\Natascha\pb.jpg' rel='lightbox[stadt]' title='Natascha Krebs'>";
+	echo "<img src='Bilder\Natascha\pb.jpg' width='133' height='133'>";
 	echo "</a>";
-	echo "<a href='Natascha\p1.jpg' rel='lightbox[stadt]' title='Natascha Krebs'>";
-	echo "<img src='Natascha\p1.jpg' width='133' height='133'>";
+	echo "<a href='Bilder\Natascha\p1.jpg' rel='lightbox[stadt]' title='Natascha Krebs'>";
+	echo "<img src='Bilder\Natascha\p1.jpg' width='133' height='133'>";
 	echo "</a>";
-	echo "<a href='Natascha\p2.jpg'	rel='lightbox[stadt]' title='Natascha Krebs'>";
-	echo "<img src='Natascha\p2.jpg' width='133' height='133'>";
+	echo "<a href='Bilder\Natascha\p2.jpg'	rel='lightbox[stadt]' title='Natascha Krebs'>";
+	echo "<img src='Bilder\Natascha\p2.jpg' width='133' height='133'>";
 	echo "</a>";
-	echo "<a href='Natascha\p3.jpg' rel='lightbox[stadt]' title='Natascha Krebs 4'>";
-	echo "<img src='Natascha\p3.jpg' width='133' height='133'>";
+	echo "<a href='Bilder\Natascha\p3.jpg' rel='lightbox[stadt]' title='Natascha Krebs 4'>";
+	echo "<img src='Bilder\Natascha\p3.jpg' width='133' height='133'>";
 	echo "</a>";
 
 	echo "<script src='js/lightbox-plus-jquery.min.js'></script>";
