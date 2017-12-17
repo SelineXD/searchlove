@@ -51,6 +51,7 @@ if ($result->rowCount() > 0) {
 						<div class="dropdown-content">
 							<a href="profil.php">Mein Profil</a>
 							<a href="profil.html">Profil bearbeiten</a>
+							<a href="bild.php">Bilder hochladen </a>
 							<a href="logout.php">Logout </a>
 						</div>
 				</div> 
