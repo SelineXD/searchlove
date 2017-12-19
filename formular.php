@@ -66,7 +66,7 @@ if ($result->rowCount() > 0) {
 		$sql = "SELECT * FROM searchlove WHERE spalte LIKE '%Suchwort%'"; 
 
 	?>
-	<?php
+	/*<?php
 		require_once ('formular.html');
 		$db_link = mysqli_connect (
 							 MYSQL_localhost, 
@@ -99,7 +99,74 @@ if ($result->rowCount() > 0) {
 		}
 		echo "</table>";
 		 
-		mysqli_free_result( $db_erg );
+		mysqli_free_result( $db_erg );*/
+			
+	$suche_nach = "%{$suchbegriff}%";
+		$suche = $db->prepare("SELECT vorname, nachname 
+							   FROM users 
+							   WHERE nachname LIKE ? OR vorname LIKE ?");
+		$suche->bind_param('ss', $suche_nach, $suche_nach);
+		$suche->execute();
+		$suche->bind_result($vorname, $nachname);
+		while ($suche->fetch()) {
+			echo "<li>";
+			echo $vorname .' '. $nachname;
+}
+		
+	?>
+	<form action="" method="get">
+		Suchen nach:
+		<input type="hidden" name="aktion" value="suchen">
+		<input type="text" name="suchbegriff" id="suchbegriff">
+		<input type="submit" value="suchen">
+	</form>
+	<?php
+	if ( $modus_aendern == false ) {
+	 if ( isset($_GET['suchbegriff']) and trim ($_GET['suchbegriff']) != '' )
+    {
+        $suchbegriff = trim ($_GET['suchbegriff']);
+        echo "<p>Gesucht wird nach: <b>$suchbegriff</b></p>";
+		
+	 if ( isset($_GET['suchbegriff']) and trim ($_GET['suchbegriff']) != '' )
+    {
+        $suchbegriff = trim ($_GET['suchbegriff']);
+        echo "<p>Gesucht wird nach: <b>$suchbegriff</b></p>";
+        $suche_nach = "%{$suchbegriff}%";
+	
+	$suche = $db->prepare("SELECT id, vorname, nachname, jahrgang, geschlecht, interessiert, suchenach 
+                     FROM users 
+                     WHERE nachname LIKE ? OR vorname LIKE ? OR jahrgang LIKE ? OR interessiert LIKE ?");
+        $suche->bind_param('sss', $suche_nach,$suche_nach,$suche_nach);
+        $suche->execute();
+        $suche->bind_result($id, $vorname, $nachname, $jahrgang, $geschlecht, $interessiert, $suchenach);
+		  while ($suche->fetch()) {
+			 $daten[] = (object) array('id' => $id, 
+                             'vorname'   => $vorname, 
+                             'nachname'  => $nachname, 
+                             'anmerkung' => $jahrgang, 
+                             'geschlecht'  => $geschlecht,
+							 'interessiert' => $interessiert,
+							 'suchenach' => $suchenach);
+		   }
+			$suche->close();
+			$id        = '';
+			$vorname   = '';
+			$nachname  = '';
+			$geschlecht = '';
+			$interessiert  = '';
+			$suchenach = '';
+	}
+			else
+			{
+				if ($erg = $db->query("SELECT *  FROM users")) {
+					if ($erg->num_rows) {
+						while ($datensatz = $erg->fetch_object()) {
+							$daten[] = $datensatz;
+						}
+						$erg->free();
+					}
+				}
+			}
 	?>
 	
 	</div>
