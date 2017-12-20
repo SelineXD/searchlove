@@ -22,7 +22,7 @@
 	</div>
 	<div class="container">
 			<a href="formular.php">Suche </a>
-			<a href="mach.php">Mach </a>
+			<a href="mach.php">Match </a>
 			<a href="login.php">Home </a>
 				<div class="dropdown">
 					<button class="dropbtn"href="profil.php.php">
@@ -59,32 +59,52 @@ if ($result->rowCount() > 0) {
 		</div> <!--Ende container-->
 	</div>
 	<div id="content">
-	
+		
 	<div id="profilbildspalte">
 		<div id= "profilbild">
-		<img src="pb.jpg" width="200px" height="200px">
+		<img src="Bilder\Natascha\pb.jpg" width="200px" height="200px">
 		</div>
 	</div>
-
+	
 <?php
+$pdo = new PDO('mysql:host=localhost;dbname=searchlove', 'root', '');
+$userid = $_SESSION['userid'];
 
-// Folgender Ansatz habe ich bereits: 
-//SELECT `vorname`, `name`, `jahrgang`, `geschlecht`, `interessiert`, `suchenach`, `hobby1`, `hobby2`, `hobby3`, `infos` FROM `users2` WHERE `hobby1` = 'kunst' OR `hobby2` = 'kunst' OR `hobby3` = 'kunst'
-//funktioniert leider noch nicht ...
-
+$sql = "SELECT hobby1 FROM users2 WHERE id = '$userid'";
 $result = $pdo->query($sql);
 
 if ($result->rowCount() > 0) {
+	 while($row = $result->fetch()) {
+		 $row["hobby1"];
+	 } 
+	 }   
+	 else 
+	 {
+         echo "ERROR";
+     }
+	 
+$hobbies1 = $row["hobby1"];
+
+$sql ="SELECT `vorname`, `name`, `jahrgang`, `geschlecht`, `interessiert`, `suchenach`, `hobby1`, `hobby2`, `hobby3`, `infos` FROM `users2` WHERE `hobby1` = '$hobbies1' OR `hobby2` = '$hobbies1' OR `hobby3` = '$hobbies1'";
+$result = $pdo->query($sql);
+
+    echo "Diese Personen lieben auch" . $row["hobby1"] . "<br/>";
+	echo "<table><tr><th>Vorname</th><th>Nachname</th><th>Jahrgang</th><th>Geschlecht</th><th>Interessiert an</th><th>Sucht nach</th><th>Kurz Information</th><th>Hobbys</th></tr>";
+
+if ($result->rowCount() > 0) {
         while($row = $result->fetch()) {
-            echo $row["vorname"]. " " . $row["name"] . " " . $row["jahrgang"]. " " . $row["geschlecht"]. " " . $row["interessiert"]. " " . $row["suchenach"]. " " . $row["infos"]. " " . $row["hobby1"]. " " . $row["hobby2"]. " " . $row["hobby3"] . "</br>";
+            echo "<tr><td>" . $row["vorname"]. "</td><td>" . $row["name"] . "</td><td>" . $row["jahrgang"]. "</td><td>" . $row["geschlecht"]. "</td><td>" . $row["interessiert"]. "</td><td>" . $row["suchenach"]. "</td><td>" . $row["infos"]. "</td><td>" . $row["hobby1"]. " ," . $row["hobby2"] . "und" . $row["hobby3"] . "</td></tr></table>";
                 }
             }   else {
                 echo "ERROR";
             }
 
+// $hobbies2 "SELECT `hobby1` FROM `users2` WHERE `id` = '$userid'";
+// $hobbies3 "SELECT `hobby1` FROM `users2` WHERE `id` = '$userid'";
 
 
-?>	
+?>
+
 	
 	</div>
 

@@ -45,6 +45,8 @@ if ($result->rowCount() > 0) {
             }
 ?>
 					
+					
+					
 					</button>
 						<div class="dropdown-content">
 							<a href="all.php">Mein Profil</a>
@@ -54,7 +56,7 @@ if ($result->rowCount() > 0) {
 						</div>
 				</div> 
 			
-	</div> <!--Ende container-->
+		</div> <!--Ende container-->
 	</div>
 	<div id="content">
 	

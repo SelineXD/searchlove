@@ -45,6 +45,8 @@ if ($result->rowCount() > 0) {
             }
 ?>
 					
+					
+					
 					</button>
 						<div class="dropdown-content">
 							<a href="all.php">Mein Profil</a>
@@ -54,7 +56,7 @@ if ($result->rowCount() > 0) {
 						</div>
 				</div> 
 			
-	</div> <!--Ende container-->
+		</div> <!--Ende container-->
 	</div>
 	<div id="content">
 
@@ -101,6 +103,7 @@ if(file_exists($new_path)) { //Falls Datei existiert, hänge eine Zahl an den Da
 move_uploaded_file($_FILES['datei']['tmp_name'], $new_path);
 echo 'Bild erfolgreich hochgeladen: <a href="'.$new_path.'">'.$new_path.'</a>';
 ?>
+
 	</div>
 
 	</body>
