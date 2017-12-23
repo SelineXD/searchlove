@@ -21,7 +21,7 @@
 	</div>
 	<div class="container">
 			<a href="formular.php">Suche </a>
-			<a href="mach.php">Mach </a>
+			<a href="mach.php">Match</a>
 			<a href="login.php">Home </a>
 				<div class="dropdown">
 					<button class="dropbtn"href="profil.php.php">
