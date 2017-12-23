@@ -4,7 +4,7 @@
         <title>searchlove</title>
 		<link rel="stylesheet" href="style.css">
     </head>
-	<div id="share-buttons">
+	<body><div id="share-buttons">
 	    		<!-- Facebook -->
 	   		 <a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank">
 	        		<img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
@@ -14,7 +14,7 @@
 	        		<img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
 	    		</a>
 		</div>
-	<body>
+	
 	
 	<div id="header">
 	<div id="logo"><img src="logo.png" width="200px">
@@ -40,8 +40,6 @@ if ($result->rowCount() > 0) {
         while($row = $result->fetch()) {
             echo $row["vorname"]. " " . $row["nachname"] . "</br>";
                 }
-            }   else {
-                echo "ERROR";
             }
 ?>
 					
@@ -69,7 +67,6 @@ if ($result->rowCount() > 0) {
 </form>	
 
 <?php
-$pdo = new PDO('mysql:host=localhost;dbname=searchlove', 'root', '');
 $showFormular = true; //Variable ob das Registrierungsformular anezeigt werden soll
  
 
