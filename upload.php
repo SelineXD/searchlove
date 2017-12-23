@@ -98,8 +98,16 @@ if(file_exists($new_path)) { //Falls Datei existiert, hänge eine Zahl an den Da
 }
  
 //Alles okay, verschiebe Datei an neuen Pfad
-move_uploaded_file($_FILES['datei']['tmp_name'], $new_path);
+move_uploaded_file($_FILES['profilbild']['tmp_name'], $new_path);
 echo 'Bild erfolgreich hochgeladen: <a href="'.$new_path.'">'.$new_path.'</a>';
+move_uploaded_file($_FILES['bild1']['tmp_name'], $new_path);
+echo 'Bild erfolgreich hochgeladen: <a href="'.$new_path.'">'.$new_path.'</a>';
+move_uploaded_file($_FILES['bild2']['tmp_name'], $new_path);
+echo 'Bild erfolgreich hochgeladen: <a href="'.$new_path.'">'.$new_path.'</a>';
+
+move_uploaded_file($_FILES['bild3']['tmp_name'], $new_path);
+echo 'Bild erfolgreich hochgeladen: <a href="'.$new_path.'">'.$new_path.'</a>';
+
 ?>
 
 	</div>
