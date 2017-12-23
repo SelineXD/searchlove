@@ -4,6 +4,7 @@
         <title>searchlove</title>
 		<link rel="stylesheet" href="style.css">
     </head>
+	<body>
 	<div id="share-buttons">
 	    		<!-- Facebook -->
 	   		 <a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank">
@@ -14,7 +15,7 @@
 	        		<img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
 	    		</a>
 		</div>
-	<body>
+	
 	
 	<div id="header">
 	<div id="logo"><img src="logo.png" width="200px">
@@ -40,14 +41,9 @@ if ($result->rowCount() > 0) {
         while($row = $result->fetch()) {
             echo $row["vorname"]. " " . $row["nachname"] . "</br>";
                 }
-            }   else {
-                echo "ERROR";
             }
 ?>
-					
-					
-					
-					</button>
+			</button>
 						<div class="dropdown-content">
 							<a href="all.php">Mein Profil</a>
 							<a href="bearbeiten.php">Profil bearbeiten</a>
@@ -67,8 +63,13 @@ if ($result->rowCount() > 0) {
 	</div>
 	
 <?php
-$pdo = new PDO('mysql:host=localhost;dbname=searchlove', 'root', '');
-$userid = $_SESSION['userid'];
+
+// Hier kämen noch hobby2 und hobby3 verbunden
+// Jedoch fand ich das Problem nicht da es an der Variable liegt und nicht im SQL
+
+
+//$hobbies2 "SELECT `hobby1` FROM `users2` WHERE `id` = '$userid'";
+// $hobbies3 "SELECT `hobby1` FROM `users2` WHERE `id` = '$userid'";
 
 $sql = "SELECT hobby1 FROM users2 WHERE id = '$userid'";
 $result = $pdo->query($sql);
@@ -78,10 +79,6 @@ if ($result->rowCount() > 0) {
 		 $row["hobby1"];
 	 } 
 	 }   
-	 else 
-	 {
-         echo "ERROR";
-     }
 	 
 $hobbies1 = $row["hobby1"];
 
@@ -93,16 +90,10 @@ $result = $pdo->query($sql);
 
 if ($result->rowCount() > 0) {
         while($row = $result->fetch()) {
-            echo "<tr><td>" . $row["vorname"]. "</td><td>" . $row["name"] . "</td><td>" . $row["jahrgang"]. "</td><td>" . $row["geschlecht"]. "</td><td>" . $row["interessiert"]. "</td><td>" . $row["suchenach"]. "</td><td>" . $row["infos"]. "</td><td>" . $row["hobby1"]. " ," . $row["hobby2"] . "und" . $row["hobby3"] . "</td></tr></table>";
+            echo "<tr><td>" . $row["vorname"]. "</td><td>" . $row["name"] . "</td><td>" . $row["jahrgang"]. "</td><td>" . $row["geschlecht"]. "</td><td>" . $row["interessiert"]. "</td><td>" . $row["suchenach"]. "</td><td>" . $row["infos"]. "</td><td>" . $row["hobby1"]. " ," . $row["hobby2"] . "und" . $row["hobby3"] . "</td></tr>";
                 }
-            }   else {
-                echo "ERROR";
-            }
-
-// $hobbies2 "SELECT `hobby1` FROM `users2` WHERE `id` = '$userid'";
-// $hobbies3 "SELECT `hobby1` FROM `users2` WHERE `id` = '$userid'";
-
-
+			}
+			echo "</table>"
 ?>
 
 	
